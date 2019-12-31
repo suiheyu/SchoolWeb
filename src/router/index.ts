@@ -49,7 +49,7 @@ const menuRoutes = [
   },
   {
     titile: "梦之队动态",
-    path: "dynamic",
+    path: "/dynamic",
     name: "Dynamic",
     component: Vue.component("Dynamic"),
     children: [{
@@ -76,7 +76,7 @@ const menuRoutes = [
   },
   {
     titile: "梦之队项目",
-    path: "project",
+    path: "/project",
     name: "Project",
     component: Vue.component("Project"),
     children: [{
@@ -110,7 +110,7 @@ const menuRoutes = [
   },
   {
     titile: "爱心资助",
-    path: "support",
+    path: "/support",
     name: "Support",
     component: Vue.component("Support"),
     children: [{
@@ -137,39 +137,53 @@ const menuRoutes = [
   },
   {
     titile: "加入我们",
-    path: "",
+    path: "/join-us",
+    name: "JoinUs",
+    component: Vue.component("JoinUs"),
     children: [{
       titile: "支教志愿者",
-      path: "",
+      path: "recruit-offline-teaching-volunteer",
+      name: "RecruitOfflineTeachingVolunteer",
+      component: Vue.component("RecruitOfflineTeachingVolunteer"),
       children: []
     },
     {
       titile: "干事招聘",
-      path: "",
+      path: "recruit-officer",
+      name: "RecruitOfficer",
+      component: Vue.component("RecruitOfficer"),
       children: []
     },
     {
       titile: "云教室课堂",
-      path: "",
+      path: "recruit-online-teaching-volunteer",
+      name: "RecruitOnlineTeachingVolunteer",
+      component: Vue.component("RecruitOnlineTeachingVolunteer"),
       children: []
     }]
   },
   {
     titile: "联系我们",
-    path: "",
+    path: "/about-us",
     children: [{
       titile: "联系方式",
-      path: "",
+      path: "contact-information",
+      name: "ContactInformation",
+      component: Vue.component("ContactInformation"),
       children: []
     },
     {
       titile: "支持我们",
-      path: "",
+      path: "support-us",
+      name: "SupportUs",
+      component: Vue.component("SupportUs"),
       children: []
     },
     {
       titile: "信息反馈",
-      path: "",
+      path: "feedback",
+      name: "Feedback",
+      component: Vue.component("Feedback"),
       children: []
     }]
   }
