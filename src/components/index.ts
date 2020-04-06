@@ -22,6 +22,7 @@ requireComponent.keys().forEach((fileName) => {
     .replace(/^\.\/_?/, '')
     // Remove the file extension from the end
     .replace(/\.\w+$/, '')
+    .replace(/[a-zA-Z]*\//,'')
     // Split up kebabs
     .split('-')
     // Upper case
@@ -30,6 +31,7 @@ requireComponent.keys().forEach((fileName) => {
     .join('')
 
   console.log(`find component ${componentName},fileName : ${fileName}`);
+  console.log(componentConfig);
 
   // Globally register the component
   Vue.component(componentName, componentConfig.default || componentConfig)

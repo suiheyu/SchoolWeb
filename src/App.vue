@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="container-fluid shadow-sm p-3 mb-5 bg-light rounded">
+    <div class="row" >
+      <SSHeader />
     </div>
-    <router-view />
+    <div class="row">
+      <SSNav />
+    </div>
+    <div class="row">
+      <SSCarousel :pics="carouselPics"></SSCarousel>
+    </div>
+    <div class="row">
+      <router-view />
+    </div>
+    <div class="row">
+      <SSFooter />
+    </div>
   </div>
 </template>
+<script>
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+console.log("publicPath",process.env.BASE_URL)
+export default {
+  data:function() {
+    return {
+      carouselPics : ["/img/pic1.png","/img/pic2.png","/img/pic3.jpg","/img/pic4.jpg","/img/pic5.jpg","/img/pic6.jpg"]
+    };
   }
+}
+</script>
+<style lang="scss">
+html{
+    font-size: 16px;
+}
+body{
+    background-color: rgba(111, 220, 228, 0.14);
+}
+#app{
+  width: 80rem;
 }
 </style>

@@ -13,5 +13,12 @@ module.exports = {
         Popper: ["popper.js", "default"]
       })
     ]
+  },
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import "~@/assets/css/common.scss";`
+      }
+    }
   }
 };
