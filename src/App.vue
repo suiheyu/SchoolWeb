@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container-fluid shadow-sm p-3 mb-5 bg-light rounded">
+  <div id="app" class="container-fluid shadow-sm p-3 mb-5 bg-white rounded">
     <div class="row" >
       <SSHeader />
     </div>
@@ -35,7 +35,9 @@ html{
     font-size: 16px;
 }
 body{
-    background-color: rgba(111, 220, 228, 0.14);
+    background-color: rgba(147, 224, 229, 0.14);
+    line-height: 160%;
+    letter-spacing: 0.02em;
 }
 #app{
   width: 80rem;

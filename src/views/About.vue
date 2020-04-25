@@ -1,6 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <SSHeader />
-  </div>
+    <div class="w-100 ss-abount">
+        <SSBreadcrumb />
+        <router-view />
+    </div>
 </template>
+<script>
+export default {
+    
+}
+</script>
+<style lang="scss" scoped>
+.ss-abount{
+    margin: 2rem 0;
+}
+</style>

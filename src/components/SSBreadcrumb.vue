@@ -4,16 +4,24 @@
     <li class="breadcrumb-item">
       <router-link to="/">首页</router-link>
     </li>
-    <li  class="breadcrumb-item">{{sub1}}</li>
-    <li class="breadcrumb-item">{{sub2}}</li>
+    <li  class="breadcrumb-item">{{t1}}</li>
+    <li class="breadcrumb-item">{{t2}}</li>
   </ol>
 </nav>
 </template>
 <script>
 export default {
   data() {
-    console.log("route", this.$route, this.$router);
-    return { sub1: this.$route.matched[0].name, sub2: this.$route.matched[1].name };
+    return {};
+  },
+  props:['sub1','sub2'],
+  computed:{
+    t1:function(){
+      return this.sub1 ? this.sub1 : this.$route.matched[0].name;
+    },
+    t2:function(){
+      return this.sub2 ? this.sub2 : this.$route.matched[1].name;
+    }
   }
 };
 </script>

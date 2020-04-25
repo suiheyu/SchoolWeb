@@ -24,7 +24,7 @@
 // interface MessageItem{
 //     name: string;
 //     url: string;
-//     time: string;
+//     time: string;a
 // }
 
 export default {
@@ -44,6 +44,7 @@ export default {
             this.activeIndex = id;
         },
         doLink:function(url) {
+            this.$router.push(url);
             console.log("click",url);
         }
     },

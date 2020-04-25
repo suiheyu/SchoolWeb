@@ -18,6 +18,7 @@ export default {
   height: 8.3rem;
   border-radius: 4.15rem 4.15rem;
   border: 0.35rem solid $ssBlueColor;
+  font-size: 0.88rem;
   > span{
       white-space: nowrap;
   }

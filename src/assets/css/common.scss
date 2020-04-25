@@ -1,5 +1,7 @@
 $ssBlueColor: #83BBDC;
 $ssGrayColor: #E8E5E5;
+$ssTitleFontSize: 1.25rem;
+$ssContentFontSize: 0.88rem;
 .ss-bg-blue{
     background-color: $ssBlueColor;
 }
@@ -8,4 +10,17 @@ $ssGrayColor: #E8E5E5;
 }
 .ss-blue{
     color: $ssBlueColor;
+}
+.ss-title-font{
+    color: $ssBlueColor;
+    font-size: $ssTitleFontSize;
+}
+.ss-content-font{
+    font-size: $ssContentFontSize;
+}
+pre{
+    font-size: 88%;
+}
+.tab1{
+    text-indent: 1rem;
 }

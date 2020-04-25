@@ -11,7 +11,13 @@
               {{ menu.title }}
             </a>
             <div v-if="menu.children.length != 0" class="dropdown-menu">
-              <router-link v-for="(item,itemId) in menu.children" :key = "itemId" :to="menu.path + '/' + item.path" class="dropdown-item">{{ item.title }}</router-link>
+              <router-link 
+              v-for="(item,itemId) in menu.children.filter( temp => ! temp.hide == true )"
+              :key = "itemId" 
+              :to="menu.path + '/' + item.path" 
+              class="dropdown-item">
+                {{ item.title }}
+              </router-link>
             </div>
         </li>
       </ul>

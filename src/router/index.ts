@@ -15,62 +15,71 @@ const menuRoutes = [
   {
     title: "关于梦之队",
     path: "/about",
-    name: "About",
-    component: Vue.component("About"),
+    name: "关于梦之队",
+    component: () => Promise.resolve(Vue.component("About")),
     children: [
     {
       title: "简介",
       path: "introduction",
-      name: "Introduction",
-      component: Vue.component("Introduction"),
+      name: "简介",
+      component: () => Promise.resolve(Vue.component("AIntroduction")),
       children: []
     },
     {
       title: "理念",
       path: "idea",
-      name: "Idea",
-      component: Vue.component("Idea"),
+      name: "理念",
+      component: () => Promise.resolve(Vue.component("AIdea")),
       children: []
     },
     {
       title: "历程",
       path: "course",
-      name: "Course",
-      component: Vue.component("Course"),
+      name: "历程",
+      component: () => Promise.resolve(Vue.component("ACourse")),
       children: []
     },
     {
       title: "合作伙伴",
       path: "patner",
-      name: "Patner",
-      component: Vue.component("Patner"),
+      name: "合作伙伴",
+      component: () => Promise.resolve(Vue.component("APatner")),
       children: []
     }]
   },
   {
     title: "梦之队动态",
     path: "/dynamic",
-    name: "Dynamic",
-    component: Vue.component("Dynamic"),
+    name: "梦之队动态",
+    component: () => Promise.resolve(Vue.component("Dynamic")),
     children: [{
       title: "新闻动态",
       path: "news",
-      name: "News",
-      component: Vue.component("News"),
+      name: "新闻动态",
+      component: () => Promise.resolve(Vue.component("DNews")),
       children: []
     },
     {
-      title: "教育资源",
-      path: "resource",
-      name: "Resource",
-      component: Vue.component("Resource"),
+      title: "教育资讯",
+      path: "information",
+      name: "教育资讯",
+      component: () => Promise.resolve(Vue.component("DInformation")),
       children: []
     },
     {
       title: "活动分享",
       path: "share",
-      name: "Share",
-      component: Vue.component("Share"),
+      name: "活动分享",
+      component: () => Promise.resolve(Vue.component("DShare")),
+      children: []
+    },
+    {
+      hide: true,
+      title: "活动分享",
+      path: "share/:id",
+      name: "活动分享",
+      component: () => Promise.resolve(Vue.component("DShareDetail")),
+      props: (route:any) => ({id:Number(route.params.id)}),
       children: []
     }]
   },
@@ -83,107 +92,109 @@ const menuRoutes = [
       title: "云教室课堂",
       path: "cloud-classroom",
       name: "云教室课堂",
-      component: () => Promise.resolve(Vue.component("CloudClassroom")),
+      component: () => Promise.resolve(Vue.component("PCloudClassroom")),
       children: []
     },
     {
       title: "长期支教",
       path: "support-education",
-      name: "SupportEducation",
-      component: Vue.component("SupportEducation"),
+      name: "长期支教",
+      component: () => Promise.resolve(Vue.component("SupportEducation")),
       children: []
     },
     {
       title: "短期志愿者",
       path: "volunteer",
-      name: "Volunteer",
-      component: Vue.component("Volunteer"),
+      name: "短期志愿者",
+      component: () => Promise.resolve(Vue.component("Volunteer")),
       children: []
     },
     {
       title: "一对一助学",
       path: "help-study",
-      name: "HelpStudy",
-      component: Vue.component("HelpStudy"),
+      name: "一对一助学",
+      component: () => Promise.resolve(Vue.component("HelpStudy")),
       children: []
     }]
   },
   {
     title: "爱心资助",
     path: "/support",
-    name: "Support",
-    component: Vue.component("Support"),
+    name: "爱心资助",
+    component: () => Promise.resolve(Vue.component("Support")),
     children: [{
       title: "衣物分享",
       path: "clothes-sharing",
-      name: "ClothesSharing",
-      component: Vue.component("ClothesSharing"),
+      name: "衣物分享",
+      component: () => Promise.resolve(Vue.component("ClothesSharing")),
       children: []
     },
     {
       title: "资金捐赠",
       path: "fund-donation",
-      name: "FundDonation",
-      component: Vue.component("FundDonation"),
+      name: "资金捐赠",
+      component: () => Promise.resolve(Vue.component("FundDonation")),
       children: []
     },
     {
       title: "产品义卖",
       path: "product-sale",
-      name: "ProductSale",
-      component: Vue.component("ProductSale"),
+      name: "产品义卖",
+      component: () => Promise.resolve(Vue.component("ProductSale")),
       children: []
     }]
   },
   {
     title: "加入我们",
     path: "/join-us",
-    name: "JoinUs",
-    component: Vue.component("JoinUs"),
+    name: "加入我们",
+    component: () => Promise.resolve(Vue.component("JoinUs")),
     children: [{
       title: "支教志愿者",
       path: "recruit-offline-teaching-volunteer",
-      name: "RecruitOfflineTeachingVolunteer",
-      component: Vue.component("RecruitOfflineTeachingVolunteer"),
+      name: "支教志愿者",
+      component: () => Promise.resolve(Vue.component("RecruitOfflineTeachingVolunteer")),
       children: []
     },
     {
       title: "干事招聘",
       path: "recruit-officer",
-      name: "RecruitOfficer",
-      component: Vue.component("RecruitOfficer"),
+      name: "干事招聘",
+      component: () => Promise.resolve(Vue.component("RecruitOfficer")),
       children: []
     },
     {
       title: "云教室课堂",
       path: "recruit-online-teaching-volunteer",
-      name: "RecruitOnlineTeachingVolunteer",
-      component: Vue.component("RecruitOnlineTeachingVolunteer"),
+      name: "云教室课堂",
+      component: () => Promise.resolve(Vue.component("RecruitOnlineTeachingVolunteer")),
       children: []
     }]
   },
   {
     title: "联系我们",
+    name: "联系我们",
     path: "/about-us",
+    component: () => Promise.resolve(Vue.component("AboutUs")),
     children: [{
       title: "联系方式",
       path: "contact-information",
-      name: "ContactInformation",
-      component: Vue.component("ContactInformation"),
+      name: "联系方式",
+      component: () => Promise.resolve(Vue.component("ContactInformation")),
       children: []
     },
     {
       title: "支持我们",
       path: "support-us",
-      name: "SupportUs",
-      component: Vue.component("SupportUs"),
+      name: "支持我们",
+      component: () => Promise.resolve(Vue.component("SupportUs")),
       children: []
     },
     {
       title: "信息反馈",
       path: "feedback",
-      name: "Feedback",
-      component: Vue.component("Feedback"),
+      name: "信息反馈",
+      component: () => Promise.resolve(Vue.component("Feedback")),
       children: []
     }]
   }
