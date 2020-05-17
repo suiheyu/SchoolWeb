@@ -10,7 +10,7 @@
                 </div>
             </caption>
             <tbody>
-                <tr v-for="(message,id) in activeData" :key="id" :url="message.url" @click="doLink(message.url)">
+                <tr v-for="(message,id) in activeData" :key="id" :url="message.url" @click="doLink(message.url)" :style="{cursor: message.url ? 'pointer' : 'default'}">
                     <td>{{message.name}}</td>
                     <td class="text-center">{{message.time}}</td>
                 </tr>
@@ -51,7 +51,9 @@ export default {
             this.activeMonth = month;
         },
         doLink:function(url) {
-            console.log("click",url);
+            if(url){
+                this.$router.push(url);
+            }
         }
     },
     computed: {
@@ -99,12 +101,6 @@ caption {
             left: 1.6rem;
             bottom: -0.3rem;
         }
-    }
-}
-tbody {
-
-    > tr{
-        cursor: pointer;
     }
 }
 .ss-news-tab{

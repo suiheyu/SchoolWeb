@@ -14,6 +14,7 @@
   width: 100%;
   > img{
     height: 7.25rem;
+    transform: scale(0.9);
   }
 }
 

@@ -22,7 +22,7 @@
         <hr />
 
         你需要做<br />
-        进咨询群--→ 下载报名表  →--填写报名表 -→- 发送至邮箱229862763@qq.com   →--面试-→   培训-  →--线上授课<br />
+        <span class="arrow">进咨询群</span><span class="arrow">下载报名表</span><span class="arrow">填写报名表</span><span class="arrow">发送至邮箱229862763@qq.com</span><span class="arrow">面试</span><span class="arrow">培训</span>线上授课<br />
         </div>
       </SSMainItem>
 </template>
@@ -49,5 +49,29 @@ export default {
       counter-increment: xxx 1;
     }
   }
+}
+
+.arrow{
+  position: relative;
+  margin-right: 3rem;
+  margin-left: 0.5rem;
+}
+.arrow::after{
+  content: "";
+  position: absolute;
+  right: -3rem;
+  top: 0.44rem;
+  border-left: .6rem solid $ssBlueColor;
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+}
+.arrow::before{
+content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.15rem;
+    background-color: $ssBlueColor;
+    right: -2.5rem;
+    top: 0.66rem;
 }
 </style>

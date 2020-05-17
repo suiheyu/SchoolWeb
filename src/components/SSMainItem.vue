@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 v-if="title" class="text-center ">{{ title }}</h1>
+    <h1 v-if="title" class="text-center mb-0">{{ title }}</h1>
     <div :class="{'ss-content': useContextMargin}">
       <slot name="default"></slot>
     </div>

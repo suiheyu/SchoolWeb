@@ -26,17 +26,17 @@ export default {
         {
           name: "长期支教",
           imageUrl: "/img/pic2.png",
-          linkUrl: ""
+          linkUrl: "/project/support-education"
         },
         {
           name: "短期志愿者",
           imageUrl: "/img/pic3.jpg",
-          linkUrl: ""
+          linkUrl: "/project/volunteer"
         },
         {
           name: "一对一助学",
           imageUrl: "/img/pic4.jpg",
-          linkUrl: ""
+          linkUrl: "/project/help-study"
         }
       ],
       news:[
@@ -46,22 +46,22 @@ export default {
           messages:[
             {
               name: "云教室2019年春季学期志愿者招募入选名单公布",
-              url: "/te1/云教室2019年春季学期志愿者招募入选名单公布",
+              url: "/dynamic/news/0",
               time: "2018-12-31"
             },
             {
               name: "河南支教队石恺璐支教总结",
-              url: "/te1/河南支教队石恺璐支教总结",
+              url: "/dynamic/news/1",
               time: "2018-12-31"
             },
             {
               name: "通告/关于文某违反梦之队纪律公告的通报",
-              url: "/te1/通告/关于文某违反梦之队纪律公告的通报",
+              url: "/dynamic/news/2",
               time: "2018-12-11"
             },
             {
-              name: "云教室2019年春季学期志愿者招募入选名单公布",
-              url: "/te1/云教室2019年春季学期志愿者招募入选名单公布",
+              name: "梦之队2018年干事招募入选名单公布",
+              url: "/dynamic/news/3",
               time: "2018-12-10"
             }
           ]

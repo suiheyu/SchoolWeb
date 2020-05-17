@@ -60,6 +60,14 @@ const menuRoutes = [
       children: []
     },
     {
+      title: "新闻动态",
+      path: "news/:id",
+      name: "新闻动态",
+      component: () => Promise.resolve(Vue.component("DNewsDetail")),
+      props: (route:any) => ({id:Number(route.params.id)}),
+      children: []
+    },
+    {
       title: "教育资讯",
       path: "information",
       name: "教育资讯",
