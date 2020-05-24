@@ -1,9 +1,9 @@
 <template>
     <div class="ss-d-information d-flex align-items-center flex-column">
         <div class="d-flex align-items-center align-items-center">
-            <div><img src="/img/pic3.jpg"/></div>
+            <div><img src="/img/page/dynamic/information/1.png"/></div>
             <div class="ss-g"></div>
-            <div><img src="/img/pic3.jpg"/></div>
+            <div><img src="/img/page/dynamic/information/2.jpg"/></div>
         </div>
         <div>
             <p>   梦之队由会长于2018年和北京童年一课开始谈关于云教室线上支教活动，于2018年11月3日正式组织团队和童年一课云教室负责人进行第一次会议，

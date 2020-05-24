@@ -5,8 +5,16 @@
     </div>
 </template>
 <script>
+import p from '@/components/ModuleIdentifier';
+
 export default {
-    
+    extends: p,
+    data() {
+        return {
+            moduleId: 4
+            
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>

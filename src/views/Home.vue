@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <ItemSlot :title="'核心项目'">
-      <SSImgItem v-for="(data,i) in coreProject" :key="i" v-bind="data" img-position="bottom" t-width="20rem"  t-height="13.38rem" t-font-size="0.88rem" />
+      <SSImgItem v-for="(data,i) in coreProject" :key="i" v-bind="data" img-position="bottom" t-width="20rem"  t-height="13.38rem" t-font-size="0.88rem"  :hover-active="Boolean('true')" />
     </ItemSlot>
     <ItemSlot :title="'新闻实事'">
       <NewsTab :datas="news" />
@@ -13,29 +13,33 @@
 </template>
 
 <script>
+import p from '@/components/ModuleIdentifier';
+
 export default {
+  extends: p,
   name: "home",
   data() {
     return {
+      moduleId: 0,
       coreProject:[
         {
           name: "云教室课堂",
-          imageUrl: "/img/pic1.png",
+          imageUrl: "/img/page/home/pic1.gif",
           linkUrl: "/project/cloud-classroom"
         },
         {
           name: "长期支教",
-          imageUrl: "/img/pic2.png",
+          imageUrl: "/img/page/home/pic2.gif",
           linkUrl: "/project/support-education"
         },
         {
           name: "短期志愿者",
-          imageUrl: "/img/pic3.jpg",
+          imageUrl: "/img/page/home/pic3.gif",
           linkUrl: "/project/volunteer"
         },
         {
           name: "一对一助学",
-          imageUrl: "/img/pic4.jpg",
+          imageUrl: "/img/page/home/pic4.gif",
           linkUrl: "/project/help-study"
         }
       ],

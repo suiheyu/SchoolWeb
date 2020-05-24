@@ -1,9 +1,9 @@
 <template>
       <SSMainItem :use-context-margin="useContextMargin">
-        <div class="ss-a-patner d-flex justify-content-around">
-          <div v-for="(item,id) in patners" :key="id" class="d-flex flex-column justify-content-start item">
+        <div class="ss-a-patner d-flex justify-content-around align-items-baseline">
+          <div v-for="(item,id) in patners" :key="id" class="d-flex flex-column justify-content-center item">
             <span class="ss-title-font">{{item.name}}</span>
-            <img :src="item.imageUrl"/>
+            <img :src="item.imageUrl" :style="item.imageStyle"/>
           </div>
         </div>
       </SSMainItem>
@@ -15,16 +15,24 @@ export default {
         useContextMargin: true,
         patners:[
           {
-            name:"泰山慈善基金会",
-            imageUrl:"/img/pic1.png"
+            name:"木寸公益",
+            imageUrl:"/img/page/about/patner_mcgy.jpg"
           },
           {
-            name:"木寸公益",
-            imageUrl:"/img/pic1.png"
+            name:"泰山慈善基金会",
+            imageUrl:"/img/page/about/patner_tscsjjh.jpg",
+            imageStyle: {
+              marginTop: "2.8rem",
+              height: "4.5rem"
+            }
           },
           {
             name:"童年一课",
-            imageUrl:"/img/pic1.png"
+            imageUrl:"/img/page/about/patner_tnyk.jpg",
+            imageStyle: {
+              marginTop: "1.8rem",
+              height: "6.5rem"
+            }
           }
         ]
       }
@@ -41,7 +49,8 @@ export default {
       text-align: center;
     }
     > img{
-      height: 10rem;
+      height: 7rem;
+      margin-top: 1rem;
     }
   }
 }

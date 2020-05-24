@@ -4,11 +4,11 @@
           <div class="d-flex justify-content-md-between">
             <div>
               <p>（1）一对一助学模式</p>
-              <img src="/img/pic1.png"/>
+              <img src="/img/page/project/help_study_1.png"/>
             </div>
             <div>
               <p>（2）助学学校</p>
-              <img src="/img/pic2.png"/>
+              <img src="/img/page/project/help_study_2.png"/>
             </div>
           </div>
           <div>
@@ -37,8 +37,9 @@ export default {
       margin-bottom: 2rem;
       img{
         margin-left: 2rem;
-        width: 20rem;
+        width: 25rem;
         display: block;
+        margin-top: 1rem;
       }
     }
   }

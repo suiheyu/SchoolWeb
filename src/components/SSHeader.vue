@@ -1,7 +1,7 @@
 <template>
   <div class="ss-head d-flex justify-content-between align-items-center flex-nowrap">
     <img src="/img/header.jpg" />
-     <router-link to="/" class="return-link btn border">返回主页</router-link>
+     <router-link to="/home" class="return-link btn border">返回主页</router-link>
   </div>
 </template>
 <script>

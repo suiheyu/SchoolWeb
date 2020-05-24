@@ -6,7 +6,15 @@ Vue.use(VueRouter);
 
 const menuRoutes = [
   {
+    hide: true,
     path: "/",
+    name: "欢迎页",
+    title: "欢迎页",
+    component: () => Promise.resolve(Vue.component("Welcom")),
+    children: []
+  },
+  {
+    path: "/home",
     name: "网站首页",
     title: "网站首页",
     component: () => Promise.resolve(Vue.component("Home")),
@@ -60,6 +68,7 @@ const menuRoutes = [
       children: []
     },
     {
+      hide: true,
       title: "新闻动态",
       path: "news/:id",
       name: "新闻动态",

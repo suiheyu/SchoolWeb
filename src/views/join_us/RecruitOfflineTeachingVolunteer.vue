@@ -37,7 +37,7 @@
     <SSMainItem :title="title2" :use-context-margin="useContextMargin">
       <div class="context-2">
         <div class="d-flex justify-content-lg-around">
-          <img src="/img/pic2.png"/>
+          <img src="/img/page/join_us/1.jpg"/>
           <p class="">
             相关信息<br />
             报名截止时间：<br />

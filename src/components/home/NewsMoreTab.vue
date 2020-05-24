@@ -43,6 +43,11 @@ export default {
             activeYear: "2018"
         };
     },
+    mounted: function(){
+        if( this.dataMonthList || this.dataMonthList[0] ){
+            this.activeMonth = this.dataMonthList[0];
+        }
+    },
     methods:{
         changeActiveYear:function (year) {
             this.activeYear = year;

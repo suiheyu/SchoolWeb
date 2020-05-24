@@ -5,6 +5,9 @@
 export default {
   data() {
     return { menus: "testData" };
+  },
+  mounted: function () {
+      this.$emit('ss-change',this.moduleId ? this.moduleId : -1);
   }
 };
 </script>

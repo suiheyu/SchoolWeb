@@ -2,7 +2,7 @@
 <nav aria-label="breadcrumb">
   <ol id="breadcrumb" class="breadcrumb bg-transparent justify-content-end">
     <li class="breadcrumb-item">
-      <router-link to="/">首页</router-link>
+      <router-link to="/home">首页</router-link>
     </li>
     <li  class="breadcrumb-item">{{t1}}</li>
     <li class="breadcrumb-item">{{t2}}</li>

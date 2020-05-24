@@ -91,39 +91,39 @@ export default {
         places: [
           {
             name: "湖南省株洲市炎陵县船形乡学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school1.jpg"
           },
           {
             name: "湖南省株洲市炎陵县下村乡学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school4.jpg"
           },
           {
             name: "湖南省株洲市炎陵县职业技术学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school2.jpg"
           },
           {
             name: "湖南省株洲市炎陵县炎陵中学",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school3.jpg"
           },
           {
             name: "湖南省株洲市炎陵县水口镇学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school5.jpg"
           },
           {
             name: "湖南省株洲市炎陵县沔渡镇学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school6.jpg"
           },
           {
             name: "湖南省株洲市炎陵县鹿原镇学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school7.jpg"
           },
           {
             name: "贵州毕节市大方县对江镇元宝小学",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school9.jpg"
           },
           {
             name: "河南省南阳市方城县柳河乡孙沟学校",
-            imageUrl: "/img/pic1.png"
+            imageUrl: "/img/page/support/school8.jpg"
           }
         ],
         historyTable:[

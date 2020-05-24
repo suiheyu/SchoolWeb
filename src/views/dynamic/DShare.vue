@@ -1,7 +1,7 @@
 <template>
     <div>
         <SSMainItem title="2018年暑期支教活动分享">
-            <SSImgList :rows="getData()" :item-show-border="isShowBorder" item-font-size="0.88rem"/>
+            <SSImgList :rows="getData()" :item-show-border="isShowBorder" item-font-size="0.88rem" row-align-type="end" row-height="17rem" :hover-active="Boolean('true')" />
         </SSMainItem>
     </div>
 </template>
@@ -13,10 +13,10 @@ export default {
             isShowBorder: false,
             colN: 4,
             viewDatas: [
-                {linkUrl:"/dynamic/share/0",name:"2018年暑期华东分区贵州铜仁支教",imageUrl:"/img/pic1.png"},
-                {linkUrl:"/dynamic/share/1",name:"2018年青岛黄海学院河南支教队",imageUrl:"/img/pic2.png"},
-                {linkUrl:"/dynamic/share/2",name:"2018年童愿计划苗楼小学支教队",imageUrl:"/img/pic3.jpg"},
-                {linkUrl:"/dynamic/share/3",name:"创客英语梦之翼暑期支教团队",imageUrl:"/img/pic4.jpg"},
+                {linkUrl:"/dynamic/share/0",name:"2018年暑期华东分区贵州铜仁支教",imageUrl:"/img/page/dynamic/share/trzj_2018/head.jpg"},
+                {linkUrl:"/dynamic/share/1",name:"2018年青岛黄海学院河南支教队",imageUrl:"/img/page/dynamic/share/hnzj_2018/head.jpg"},
+                {linkUrl:"/dynamic/share/2",name:"2018年童愿计划苗楼小学支教队",imageUrl:"/img/page/dynamic/share/mlzj_2018/head.jpg"},
+                {linkUrl:"/dynamic/share/3",name:"创客英语梦之翼暑期支教团队",imageUrl:"/img/page/dynamic/share/sqzj/head.png"},
             ]
         };
     },

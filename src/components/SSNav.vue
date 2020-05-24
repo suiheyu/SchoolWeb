@@ -5,7 +5,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav justify-content-center align-content-stretch">
-        <li v-for="(menu,index) in menus" :key="index" :class="{ 'dropdown' : menu.children.length != 0 }" class="nav-item">
+        <li v-for="(menu,index) in menus.filter( temp => ! temp.hide == true )" :key="index" :class="{ 'dropdown' : menu.children.length != 0 }" class="nav-item">
             <router-link v-if="menu.children.length == 0" :to="menu.path" class="nav-link">{{ menu.title }}</router-link>
             <a v-else class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ menu.title }}
@@ -15,7 +15,7 @@
               v-for="(item,itemId) in menu.children.filter( temp => ! temp.hide == true )"
               :key = "itemId" 
               :to="menu.path + '/' + item.path" 
-              class="dropdown-item">
+              class="dropdown-item" >
                 {{ item.title }}
               </router-link>
             </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex flex-column justify-content-around align-items-center" :style="{margin: tMargin}">
-        <ul v-for="(row,i) in rows" :key="i" class="d-flex justify-content-start align-items-center p-0 m-0" :style="{'height': rowHeight}">
+        <ul v-for="(row,i) in rows" :key="i" class="d-flex justify-content-start p-0 m-0" :class="rowAlignClass" :style="{'height': rowHeight}">
             <li v-for="(item,j) in row" :key="j" >
                 <SSImgItem v-bind="bindItemData(item)" :style="{margin: '0 ' + rowMarginWidth}"/>
             </li>
@@ -12,6 +12,14 @@
 export default {
     props:{
         rows: Array,
+        hoverActive: {
+            type: Boolean,
+            default: false
+        },
+        hoverEnlarge: {
+            type: Boolean,
+            default: false
+        },
         tMargin: {
             type: String,
             default: "3rem 0"
@@ -19,6 +27,10 @@ export default {
         rowMarginWidth:{
             type: String,
             default: "1rem"
+        },
+        rowAlignType:{
+            type: String,
+            default: "center"
         },
         rowHeight: {
             type: String,
@@ -47,7 +59,9 @@ export default {
         itemFontSize: String
     },
     data:function(){
-        return {};
+        return {
+            rowAlignClass: `align-items-${this.rowAlignType}`
+        };
     },
     methods: {
         bindItemData: function (itemData) {
@@ -61,6 +75,8 @@ export default {
                 tFontSize: this.itemFontSize,
                 cursor: this.itemCursor,
                 imgPosition: this.itemImgPosition,
+                hoverActive: this.hoverActive,
+                hoverEnlarge: this.hoverEnlarge
             }
         }
     }

@@ -24,3 +24,9 @@ pre{
 .tab1{
     text-indent: 1rem;
 }
+.ss-hover-active{
+    transition: all 0.3s;
+    &:hover{
+        box-shadow: -1px 1px 6px 4px #aca9ca;
+    }
+}
